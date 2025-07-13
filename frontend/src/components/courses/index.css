@@ -1,0 +1,110 @@
+.main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color:gray;
+}
+
+.courses-container {
+    background-color:red;
+    height: 100vh;
+    width: 200vw; /* Increased width */
+    padding-left: 50px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    border-radius: 15px; /* Add border radius to the container */
+}
+
+.courses-heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 46px;
+    color: black;
+}
+
+.courses-search-container {
+    border: 1px solid skyblue;
+    width: 70%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 15px 9px;
+    border-radius: 24px;
+    align-self: center;
+}
+
+.search-element {
+    border: 0;
+    outline: none;
+    width: 80%;
+    font-size:medium;
+    padding: 10px 10px 10px 10px
+}
+
+.list-of-courses {
+    width: 70%;
+    list-style: none;
+    margin-top: 20px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+}
+
+.each-course {
+    background-color: darkturquoise;
+    margin: 10px; /* Spacing between courses */
+    padding: 0; /* No padding for uniformity */
+    border-radius: 27px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Stretch items to fill space */
+    width: 200px; /* Fixed width for uniformity */
+    height: 300px; /* Fixed height for uniformity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.3s; /* Add transition for scaling effect */
+}
+
+.each-course:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.course-image {
+    height: 80%; /* This will take 80% of the course container */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent overflow */
+    margin: 0; /* No margin to avoid gaps */
+}
+
+.course-img {
+    height: 100%; /* Ensure image fills the height of the course-image container */
+    width: 100%; /* Ensure image fills the width of the course-image container */
+    object-fit: cover; /* Maintain aspect ratio and fill the area */
+    border-radius: 27px 27px 0 0; /* Match the top border radius with the container */
+    font-size: 20px;
+}
+
+.course-name {
+    height: 20%; /* This will take 20% of the course container */
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center text */
+    font-size: 22px !important; /* Reduced font size with important */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #007bff; /* Background color for course name */
+    width: 100%; /* Match the full width of the container */
+    border-radius: 0 0 27px 27px; /* Rounded corners at the bottom */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    white-space: nowrap; /* Prevent line breaks */
+}

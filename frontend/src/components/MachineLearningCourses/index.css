@@ -1,0 +1,38 @@
+.course-content {
+    width: 100vw;
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    background-color: lightgray;
+}
+
+.course-nameP {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    text-align: center;
+    font-style: oblique;
+    color: white;
+    background-color: blue;
+    width: 500px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.content {
+    padding: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+strong {
+    font-weight: bold;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}

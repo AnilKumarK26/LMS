@@ -1,0 +1,70 @@
+/* Container for the Forgot Password page */
+.forgot-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f4f8; /* Light background color */
+  }
+  
+  /* Form container */
+  .forgot-password-form {
+    background-color: white; /* White background for the form */
+    padding: 30px; /* Padding inside the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 400px; /* Fixed width for the form */
+    text-align: center; /* Center align text inside the form */
+  }
+  
+  /* Form heading */
+  .forgot-password-form h2 {
+    font-size: 24px; /* Larger font for the heading */
+    margin-bottom: 20px; /* Spacing below the heading */
+    color: #333; /* Darker text color */
+  }
+  
+  /* Instruction text */
+  .forgot-password-form p {
+    font-size: 16px; /* Regular font size for instructions */
+    margin-bottom: 15px; /* Spacing below the paragraph */
+    color: #555; /* Slightly lighter text color */
+  }
+  
+  /* Label styling */
+  .forgot-password-form label {
+    display: block; /* Block display for label to appear above input */
+    font-weight: bold; /* Bold text for label */
+    margin-bottom: 5px; /* Spacing between label and input */
+    color: #444; /* Darker label text */
+  }
+  
+  /* Input field styling */
+  .forgot-password-form input {
+    width: 100%; /* Full width input field */
+    padding: 10px; /* Padding inside the input field */
+    margin-bottom: 20px; /* Spacing below the input */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners for input */
+    font-size: 14px; /* Slightly larger font for better readability */
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's width and height */
+  }
+  
+  /* Button styling */
+  .forgot-password-button {
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text */
+    padding: 10px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Hand pointer on hover */
+    width: 100%; /* Full width button */
+    font-size: 16px; /* Font size for the button */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  /* Button hover effect */
+  .forgot-password-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  

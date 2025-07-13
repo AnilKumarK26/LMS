@@ -1,0 +1,116 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Quiz container */
+.quiz-container {
+    max-width: 600px; /* Limits the width for better readability */
+    margin: 40px auto; /* Centers the container with top margin */
+    padding: 20px;
+    border: 2px solid #ccc; /* Light border for separation */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* White background for clarity */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Quiz title */
+.quiz-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue color for the title */
+}
+
+/* Question slide */
+.question-slide {
+    padding: 20px;
+    border: 1px solid #ccc; /* Border for question area */
+    border-radius: 10px; /* Rounded corners for question area */
+    background-color: #f9f9f9; /* Slightly different background */
+}
+
+/* Question text */
+.question {
+    font-size: 18px; /* Larger font for questions */
+    margin-bottom: 15px; /* Spacing below the question */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column; /* Stack options vertically */
+}
+
+/* Options styling */
+.option {
+    margin-bottom: 10px; /* Spacing between options */
+    cursor: pointer; /* Pointer cursor for better UX */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.option:hover {
+    background-color: #e8f0fe; /* Light blue on hover */
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Space buttons apart */
+}
+
+/* Button styles */
+.prev-button,
+.next-button,
+.submit-button {
+    padding: 10px 20px; /* Padding for buttons */
+    font-size: 16px; /* Font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Text color */
+    transition: background-color 0.3s ease; /* Smooth background change */
+}
+
+/* Button hover effects */
+.prev-button:hover,
+.next-button:hover,
+.submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Each option styling */
+.each-option {
+    color: black; /* Black text for options */
+    font-weight: 500; /* Slightly bold */
+}
+
+/* Review section */
+.review-container {
+    margin-top: 20px; /* Spacing above review section */
+    border-top: 2px solid #ccc; /* Divider for visual separation */
+    padding-top: 20px; /* Spacing above review text */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    .question {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .prev-button,
+    .next-button,
+    .submit-button {
+        font-size: 14px; /* Smaller buttons on mobile */
+    }
+}

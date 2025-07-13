@@ -1,0 +1,81 @@
+/* Main dashboard container */
+.dashboard-container {
+    padding: 20px; /* Padding around the content */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Title styling */
+.dashboard-title {
+    text-align: center; /* Center align title */
+    font-size: 24px; /* Larger font size for visibility */
+    font-weight: bold; /* Bold title for emphasis */
+    color: #333; /* Dark gray color for text */
+}
+
+/* Section styling */
+.section {
+    margin-top: 20px; /* Space above sections */
+}
+
+/* Section title styling */
+.section-title {
+    margin-bottom: 10px; /* Space below section title */
+    font-size: 20px; /* Font size for section titles */
+    color: #555; /* Medium gray for section title */
+}
+
+/* Table styling for attempts */
+.attempts-table {
+    width: 100%; /* Full width of the container */
+    border-collapse: collapse; /* Merge borders */
+}
+
+/* Table cells styling */
+.attempts-table th, .attempts-table td {
+    border: 1px solid #ddd; /* Light gray border for cells */
+    padding: 8px; /* Padding within cells */
+    text-align: left; /* Left align text */
+}
+
+/* Header styling for the table */
+.attempts-table th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+
+/* Loading message styling */
+.loading {
+    text-align: center; /* Center align loading message */
+    font-size: 18px; /* Font size for loading */
+    margin-top: 20px; /* Space above loading message */
+    color: #777; /* Medium gray for the loading text */
+}
+
+/* Pie chart container styling */
+.pie-chart-container {
+    display: inline-block; /* Allow multiple pie charts in a row */
+    margin-right: 10px; /* Space between pie charts */
+    overflow-x: auto; /* Enable horizontal scroll if necessary */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .dashboard-title {
+        font-size: 22px; /* Slightly smaller title */
+    }
+
+    .section-title {
+        font-size: 18px; /* Slightly smaller section titles */
+    }
+
+    .attempts-table {
+        font-size: 14px; /* Smaller font size for table */
+    }
+}

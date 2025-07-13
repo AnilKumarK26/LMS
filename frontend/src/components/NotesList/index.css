@@ -1,0 +1,83 @@
+/* Notes List Container */
+.notes-list {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f4f4f4; /* Light background for contrast */
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Header Style */
+.notes-header {
+    font-size: 2.5rem; /* Larger font size */
+    font-family: 'Arial', sans-serif; /* Modern font */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 20px; /* Space below header */
+}
+
+/* Add Notes Button */
+.add-notes {
+    background-color: #28a745; /* Bootstrap success color */
+    border: none; /* No border */
+    padding: 15px 25px; /* Adjusted padding */
+    cursor: pointer; /* Pointer cursor */
+    color: white; /* White text */
+    font-size: 1.2rem; /* Larger font size */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    margin-bottom: 20px; /* Space below button */
+}
+
+/* Hover Effect for Add Notes Button */
+.add-notes:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* List of Notes */
+.list-of-notes {
+    width: 80%; /* Width of the notes list */
+    display: flex; /* Enable flexbox for row layout */
+    flex-wrap: wrap; /* Allow wrapping to next line if needed */
+    justify-content: center; /* Center the notes in the container */
+    list-style: none; /* Remove bullet points */
+}
+
+/* Each Note Item */
+.each-notes {
+    background-color: #fff; /* White background for notes */
+    width: 250px; /* Fixed width for each note */
+    max-width: 100%; /* Allow note to resize on smaller screens */
+    padding: 15px 20px; /* More padding for aesthetics */
+    margin: 10px; /* Space between notes */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.2); /* Subtle shadows */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    color:white;
+}
+
+.each-notes h1,
+.each-notes h3{
+    text-decoration: none;
+    color:black;
+}
+
+/* Hover Effect for Each Note */
+.each-notes:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Link Style for Notes */
+.notes-heading {
+    color: #007BFF; /* Bootstrap primary color */
+    text-decoration: none; /* No underline */
+}
+
+/* Note Date Style */
+.date {
+    color: #666; /* Lighter gray for date */
+    font-size: 0.9rem; /* Smaller font size for date */
+}

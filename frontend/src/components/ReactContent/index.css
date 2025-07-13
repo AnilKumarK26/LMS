@@ -1,0 +1,65 @@
+/* index.css */
+
+/* Overall course content container */
+.course-content {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Course title */
+.course-nameP {
+    font-size: 36px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Content paragraphs */
+.content p {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Section headings */
+.content h1 {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Strong emphasis */
+.content strong {
+    font-weight: bold;
+    font-size: 18px;
+    color: #16a085;
+}
+
+/* Code snippets */
+.content pre, .content code {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #2c3e50;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Link */
+.content a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}

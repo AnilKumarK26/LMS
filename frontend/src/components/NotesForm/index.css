@@ -1,0 +1,93 @@
+/* Note Form Container */
+.note-form-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* Center-align items horizontally */
+  padding: 50px;
+  background-color: #f0f8ff; /* Light background color for contrast */
+  font-family: 'Arial', sans-serif; /* Consistent font family */
+}
+
+/* Heading Style */
+.add-notes-heading {
+  font-weight: 700;
+  font-size: 2.5rem; /* Larger font size */
+  color: #333; /* Darker color for better readability */
+  margin-bottom: 20px; /* Space below the heading */
+  text-align: center; /* Center heading text */
+  text-transform: uppercase; /* Make heading uppercase for emphasis */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+/* Note Form Style */
+.note-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 50px; /* Increased padding for comfort */
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 15px; /* More rounded corners for a softer look */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced soft shadow */
+  width: 90%; /* Responsive width */
+  max-width: 600px; /* Maximum width for larger screens */
+}
+
+/* Input Fields */
+.note-input {
+  width: 100%; /* Full width of the form */
+  max-width: 300px; /* Limit maximum width */
+  margin-bottom: 20px; /* More space below inputs */
+  padding: 12px; /* More padding for inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 8px; /* More rounded corners */
+  font-size: 16px; /* Font size */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on focus */
+}
+
+/* Focus State for Inputs */
+.note-input:focus {
+  outline: none; /* Remove default outline */
+  border-color: dodgerblue; /* Change border color on focus */
+  box-shadow: 0 0 5px dodgerblue; /* Subtle glow effect */
+}
+
+/* Textarea Style */
+textarea.note-input {
+  height: 150px; /* Fixed height */
+  resize: vertical; /* Allow vertical resize */
+}
+
+/* Add Button Style */
+.add-button {
+  padding: 12px 25px; /* Increased padding */
+  background-color: dodgerblue; /* Button color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+/* Hover Effect for Add Button */
+.add-button:hover {
+  background-color: #007bff; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Active Effect for Add Button */
+.add-button:active {
+  transform: translateY(1px); /* Pressed down effect */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Reduced shadow on click */
+}
+
+/* Accessibility Styles */
+.note-input::placeholder {
+  color: #aaa; /* Lighter color for placeholder text */
+  font-style: italic; /* Italic style for placeholder */
+}

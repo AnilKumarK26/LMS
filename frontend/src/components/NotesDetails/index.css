@@ -1,0 +1,71 @@
+/* Notes Detailer Container */
+.notes-detailer-container {
+    width: 100vw;
+    height: auto; /* Use auto for flexible height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 40px;
+    background-color: #f8f9fa;
+    color:black /* Light background for contrast */
+}
+.notes-detailer-container h1{
+    color:black;
+}
+/* Main Heading */
+.main-heading {
+    width: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem; /* Responsive font size */
+    align-self: center;
+    font-weight: 700; /* Slightly less weight for readability */
+    text-align: center; /* Center the heading */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Details Section */
+.details {
+    background-color: azure;
+    padding: 30px;
+    border-radius: 15px; /* Increased border radius for a softer look */
+    font-size: 1.5rem; /* Responsive font size */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    max-width: 800px; /* Maximum width for better readability */
+    width: 100%; /* Full width of container */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+/* Container for Notes Details */
+.container-notes-details {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Download Button */
+.download {
+    background-color: black;
+    color:white;
+    border: none; /* Removed border for a cleaner look */
+    padding: 15px 30px; /* Adjusted padding for better proportions */
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem; /* Responsive font size */
+    border-radius: 12px; /* Consistent border radius */
+    transition: background-color 0.3s ease, transform 0.2s; /* Smooth transitions */
+}
+
+/* Hover Effect for Download Button */
+.download:hover {
+    background-color: #0095e0; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Active Effect for Download Button */
+.download:active {
+    transform: translateY(1px); /* Pressed down effect */
+}

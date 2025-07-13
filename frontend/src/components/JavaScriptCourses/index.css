@@ -1,0 +1,90 @@
+/* General styles for the JavaScript course component */
+.js-course-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.js-course-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.js-content {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color:black;
+}
+
+.js-introduction,
+.js-advantages,
+.js-dynamic,
+.js-summary {
+    margin-bottom: 15px;
+}
+
+.js-highlight {
+    color: #007BFF; /* Bootstrap primary color */
+    font-weight: bold;
+}
+
+.js-why-choose,
+.js-key-features,
+.js-advanced-topics,
+.js-use-cases,
+.js-learning-resources {
+    margin-top: 25px;
+    font-size: 1.8rem;
+    color: #444;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+.js-event-driven {
+    color: #007BFF;
+}
+
+.js-feature-highlight {
+    color: #e74c3c; /* Highlight color */
+}
+
+.js-example-title {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.js-code-example {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.js-use-case-highlight {
+    font-weight: bold;
+    color: #27ae60; /* Success color */
+}
+
+.js-books,
+.js-online-courses {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.js-learn-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.js-learn-more:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}

@@ -1,0 +1,416 @@
+/* Modern CSS with enhanced visual design for C++ course page */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9fafc;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Main container with gradient background */
+.cpp-course-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background: linear-gradient(145deg, #ffffff, #f0f4f8);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 71, 171, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative elements */
+.cpp-course-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 200px;
+  width: 200px;
+  background: radial-gradient(circle at top right, rgba(0, 71, 171, 0.1), transparent 70%);
+  z-index: 0;
+}
+
+.cpp-course-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 150px;
+  width: 150px;
+  background: radial-gradient(circle at bottom left, rgba(0, 71, 171, 0.05), transparent 70%);
+  z-index: 0;
+}
+
+/* Course title with animation */
+.cpp-course-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #0047ab;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 71, 171, 0.1);
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0, 71, 171, 0.2);
+}
+
+.cpp-course-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #0047ab;
+  border-radius: 2px;
+}
+
+/* Content section */
+.cpp-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Introduction paragraph */
+.cpp-introduction {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #2d3748;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  border-left: 4px solid #0047ab;
+}
+
+/* Highlight text */
+.cpp-highlight {
+  color: #0047ab;
+  font-weight: 600;
+  font-size: 22px;
+  position: relative;
+  padding: 0 4px;
+}
+
+.cpp-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(0, 71, 171, 0.2);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+/* Section headings */
+.cpp-why-choose,
+.cpp-key-features {
+  font-size: 32px;
+  font-weight: 600;
+  color: #0047ab;
+  margin: 40px 0 20px;
+  padding-left: 15px;
+  border-left: 5px solid #0047ab;
+  background-color: rgba(0, 71, 171, 0.05);
+  padding: 10px 15px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Paragraphs */
+.cpp-advantages,
+.cpp-performance,
+.cpp-oop,
+.cpp-stl,
+.cpp-summary {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+/* Feature highlights */
+.cpp-feature-highlight,
+.cpp-memory-manipulation,
+.cpp-feature-highlight-2,
+.cpp-cross-platform {
+  color: #0047ab;
+  font-weight: 600;
+  font-size: 19px;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 8px;
+  background-color: rgba(0, 71, 171, 0.08);
+  border-radius: 4px;
+}
+
+/* Code example title */
+.cpp-example-title {
+  display: block;
+  font-size: 20px;
+  color: #2d3748;
+  margin: 30px 0 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Code example container */
+.cpp-code-example {
+  background: linear-gradient(145deg, #2d3748, #1a202c);
+  color: #f8f8f2;
+  padding: 25px;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 16px;
+  margin: 20px 0 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Code styling */
+.cpp-content code {
+  font-family: 'Fira Code', monospace;
+  line-height: 1.6;
+}
+
+/* Syntax highlighting for C++ */
+.cpp-content code .keyword {
+  color: #ff79c6;
+}
+
+.cpp-content code .function {
+  color: #50fa7b;
+}
+
+.cpp-content code .string {
+  color: #f1fa8c;
+}
+
+.cpp-content code .comment {
+  color: #6272a4;
+}
+
+/* Learn more button */
+.cpp-learn-more {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(to right, #0047ab, #4169e1);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: block;
+  max-width: 250px;
+  margin: 40px auto 10px;
+}
+
+.cpp-learn-more:hover {
+  background: linear-gradient(to right, #003580, #0047ab);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 71, 171, 0.4);
+}
+
+.cpp-learn-more:active {
+  transform: translateY(1px);
+}
+
+/* Add responsive design */
+@media screen and (max-width: 768px) {
+  .cpp-course-content {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .cpp-course-title {
+    font-size: 36px;
+  }
+  
+  .cpp-why-choose,
+  .cpp-key-features {
+    font-size: 28px;
+  }
+  
+  .cpp-introduction,
+  .cpp-content p {
+    font-size: 16px;
+  }
+  
+  .cpp-highlight {
+    font-size: 18px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cpp-course-content > * {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.cpp-course-title {
+  animation-delay: 0.1s;
+}
+
+.cpp-introduction {
+  animation-delay: 0.2s;
+}
+
+.cpp-why-choose {
+  animation-delay: 0.3s;
+}
+
+.cpp-advantages {
+  animation-delay: 0.4s;
+}
+
+/* Add a floating notification for new course */
+.new-course-badge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(255, 126, 95, 0.3);
+  transform: rotate(5deg);
+  z-index: 2;
+}
+
+/* Feature cards styling */
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-top: 5px solid transparent;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 71, 171, 0.15);
+    border-top: 5px solid #0047ab;
+  }
+  
+  .feature-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: rgba(0, 71, 171, 0.1);
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    color: #0047ab;
+  }
+  
+  .feature-card h3 {
+    font-size: 20px;
+    color: #0047ab;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  
+  .feature-card p {
+    color: #4a5568;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Code section styling */
+  .code-section {
+    background: rgba(0, 71, 171, 0.03);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px 0;
+  }
+  
+  /* CTA container */
+  .cta-container {
+    background: linear-gradient(to right, rgba(0, 71, 171, 0.05), rgba(65, 105, 225, 0.05));
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .course-stats {
+    margin-top: 15px;
+    color: #4a5568;
+    font-size: 16px;
+  }
+  
+  .course-stats span {
+    display: inline-block;
+    margin: 0 8px;
+  }
+  
+  /* Add a progress indicator */
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    margin: 40px 0;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 15%; /* Initial progress */
+    background: linear-gradient(to right, #0047ab, #4169e1);
+    border-radius: 4px;
+    transition: width 1s ease;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .feature-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-container {
+      padding: 20px;
+    }
+    
+    .course-stats span {
+      display: block;
+      margin: 5px 0;
+    }
+  }
