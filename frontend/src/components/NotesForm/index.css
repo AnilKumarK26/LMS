@@ -1,93 +1,378 @@
-/* Note Form Container */
-.note-form-container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; /* Center-align items horizontally */
-  padding: 50px;
-  background-color: #f0f8ff; /* Light background color for contrast */
-  font-family: 'Arial', sans-serif; /* Consistent font family */
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Heading Style */
-.add-notes-heading {
-  font-weight: 700;
-  font-size: 2.5rem; /* Larger font size */
-  color: #333; /* Darker color for better readability */
-  margin-bottom: 20px; /* Space below the heading */
-  text-align: center; /* Center heading text */
-  text-transform: uppercase; /* Make heading uppercase for emphasis */
-  letter-spacing: 1px; /* Spacing between letters */
-}
-
-/* Note Form Style */
-.note-form {
-  align-self: center;
+/* Main page container */
+.note-form-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 50px; /* Increased padding for comfort */
-  background-color: #ffffff; /* White background for the form */
-  border-radius: 15px; /* More rounded corners for a softer look */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced soft shadow */
-  width: 90%; /* Responsive width */
-  max-width: 600px; /* Maximum width for larger screens */
+  justify-content: flex-start;
+  padding: 3rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* Input Fields */
-.note-input {
-  width: 100%; /* Full width of the form */
-  max-width: 300px; /* Limit maximum width */
-  margin-bottom: 20px; /* More space below inputs */
-  padding: 12px; /* More padding for inputs */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 8px; /* More rounded corners */
-  font-size: 16px; /* Font size */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on focus */
+/* Background decoration */
+.background-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-/* Focus State for Inputs */
-.note-input:focus {
-  outline: none; /* Remove default outline */
-  border-color: dodgerblue; /* Change border color on focus */
-  box-shadow: 0 0 5px dodgerblue; /* Subtle glow effect */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
 }
 
-/* Textarea Style */
-textarea.note-input {
-  height: 150px; /* Fixed height */
-  resize: vertical; /* Allow vertical resize */
+.bg-circle-1 {
+  width: 20rem;
+  height: 20rem;
+  background-color: #dbeafe;
+  top: -10rem;
+  right: -10rem;
 }
 
-/* Add Button Style */
-.add-button {
-  padding: 12px 25px; /* Increased padding */
-  background-color: dodgerblue; /* Button color */
-  color: white; /* White text color */
-  border: none; /* No border */
-  border-radius: 8px; /* Rounded corners */
-  font-size: 16px; /* Font size */
-  cursor: pointer; /* Pointer cursor */
-  transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+.bg-circle-2 {
+  width: 20rem;
+  height: 20rem;
+  background-color: #e0f2fe;
+  bottom: -10rem;
+  left: -10rem;
 }
 
-/* Hover Effect for Add Button */
-.add-button:hover {
-  background-color: #007bff; /* Darker blue on hover */
-  transform: translateY(-2px); /* Lift effect on hover */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+.bg-circle-3 {
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* Active Effect for Add Button */
-.add-button:active {
-  transform: translateY(1px); /* Pressed down effect */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Reduced shadow on click */
+/* Page header */
+.page-header {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* Accessibility Styles */
-.note-input::placeholder {
-  color: #aaa; /* Lighter color for placeholder text */
-  font-style: italic; /* Italic style for placeholder */
+.main-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.heading-underline {
+  width: 6rem;
+  height: 0.25rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+/* Form wrapper */
+.form-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 32rem;
+}
+
+.form-container {
+  backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #dbeafe;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.2);
+  padding: 2rem 3rem;
+  position: relative;
+}
+
+/* Form header */
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+.form-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  stroke-width: 2;
+}
+
+.form-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Form styles */
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.125rem;
+  border: 2px solid #dbeafe;
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+  font-family: inherit;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.textarea-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.icon-small {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #3b82f6;
+  opacity: 0.5;
+  stroke-width: 2;
+}
+
+/* Button styles */
+.button-wrapper {
+  padding-top: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+  background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+  color: white;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+  font-size: 1.125rem;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
+  box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+.button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.submit-button:hover .button-overlay {
+  opacity: 1;
+}
+
+.button-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 2;
+}
+
+/* Decorative elements */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.deco-circle-1 {
+  width: 2rem;
+  height: 2rem;
+  background-color: #bfdbfe;
+  top: -1rem;
+  left: -1rem;
+}
+
+.deco-circle-2 {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #e0f2fe;
+  bottom: -1rem;
+  right: -1rem;
+}
+
+/* Footer decoration */
+.footer-decoration {
+  position: relative;
+  z-index: 10;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footer-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  background-color: #93c5fd;
+}
+
+.dot-2 {
+  background-color: #7dd3fc;
+}
+
+.dot-3 {
+  background-color: #93c5fd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .note-form-page {
+    padding: 2rem 1rem;
+  }
+  
+  .main-heading {
+    font-size: 2.5rem;
+  }
+  
+  .form-container {
+    padding: 1.5rem 2rem;
+  }
+  
+  .bg-circle-1,
+  .bg-circle-2,
+  .bg-circle-3 {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .note-form-page {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .main-heading {
+    font-size: 2rem;
+  }
+  
+  .form-container {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .form-input,
+  .form-textarea {
+    font-size: 1rem;
+    padding: 0.875rem;
+  }
 }
